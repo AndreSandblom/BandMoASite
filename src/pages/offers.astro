@@ -1,0 +1,74 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Vad vi erbjuder | MoA - Marcus & André" isHeroPage={true}>
+<section class="relative min-h-screen text-white overflow-hidden">
+
+  <!-- Background -->
+  <img 
+    src="/images/background_home_page_playing_guitar.jpg"
+    class="absolute inset-0 w-full h-full object-cover opacity-40"
+  />
+
+  <div class="absolute inset-0 bg-amber-900/30"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 px-4 max-w-6xl mx-auto pt-28 pb-24">
+
+    <h1 class="hero-slide text-5xl font-bold italic text-center mb-16 text-amber-100 drop-shadow-lg">
+      Vad vi erbjuder
+    </h1>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Bar & Restaurant -->
+      <div class="bg-amber-900/40 backdrop-blur-md rounded-xl p-8 text-center shadow-lg hover:scale-105 transition">
+
+        <h2 class="text-3xl font-bold text-amber-100 mb-4">
+          Bar & Restaurang
+        </h2>
+
+        <p class="text-amber-100/90 leading-relaxed">
+          Vi spelar stämningsfull livemusik som passar perfekt för barer
+          och restauranger. Repertoaren består av både klassiska låtar
+          och moderna favoriter, anpassade för att skapa en avslappnad
+          och trivsam atmosfär för gästerna.
+        </p>
+
+      </div>
+
+      <!-- Private / Company -->
+      <div class="bg-amber-900/40 backdrop-blur-md rounded-xl p-8 text-center shadow-lg hover:scale-105 transition">
+
+        <h2 class="text-3xl font-bold text-amber-100 mb-4">
+          Privat & Företag
+        </h2>
+
+        <p class="text-amber-100/90 leading-relaxed">
+          Vi spelar på privata fester, företagsevent och andra tillfällen
+          där livemusik kan höja stämningen. Oavsett om det är en
+          födelsedag, firmafest eller annan tillställning skapar vi
+          en musikalisk upplevelse som passar just ert event.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+
+      <a
+        href="/contact"
+        class="inline-block bg-amber-700 hover:bg-amber-600 text-white font-semibold px-8 py-4 rounded-lg transition hover:scale-105"
+      >
+        Kontakta oss för bokning
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+</Layout>

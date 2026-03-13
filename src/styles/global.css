@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: translateX(-100px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.hero-slide {
+  animation: slideIn 1.2s ease-out forwards;
+}
+/* Base link style */
+.nav-link {
+  @apply text-amber-100 relative transition duration-300;
+}
+
+/* Hover underline animation */
+.nav-link::after {
+  content: "";
+  @apply absolute left-0 bottom-0 w-0 h-0.5 bg-amber-300 transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.nav-link:hover {
+  @apply text-amber-300;
+}
+
+/* Active page styling */
+.active-nav {
+  @apply text-amber-300 font-semibold;
+}
+
+.active-nav::after {
+  @apply w-full;
+}
+
+/* nicer dark scrollbar */
+.gallery-scroll::-webkit-scrollbar {
+  width: 8px;
+}
+
+.gallery-scroll::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb {
+  background: #fef3c7;
+  border-radius: 10px;
+}
+
+.gallery-scroll::-webkit-scrollbar-thumb:hover {
+  background: #fcd34d;
+}

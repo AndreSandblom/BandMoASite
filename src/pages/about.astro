@@ -1,0 +1,75 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Om oss | MoA-Marcus & André" isHeroPage={true}>
+  <section class="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
+    <img 
+      src="/images/background_home_page_playing_guitar.jpg"
+      class="absolute inset-0 w-full h-full object-cover opacity-40"
+    />
+
+    <div class="absolute inset-0 bg-amber-900/30"></div>
+
+    <div class="relative z-10 px-4 w-full max-w-6xl mx-auto pt-24 pb-20">
+
+      <h1 class="hero-slide text-5xl font-bold italic mb-12 text-amber-100 drop-shadow-lg text-center">
+        Om oss
+      </h1>
+
+      <!-- Cards -->
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <!-- André -->
+        <div class="bg-amber-900/40 backdrop-blur-md rounded-xl p-8 text-center shadow-lg hover:scale-105 transition">
+
+          <img
+            src="/images/andre.jpg"
+            class="w-36 h-36 mx-auto rounded-full object-cover mb-6 border-4 border-amber-200"
+          />
+
+          <h2 class="text-3xl font-bold mb-4 text-amber-100">
+            André
+          </h2>
+
+          <p class="text-amber-200 text-lg mb-4">
+            Gitarr & sång
+          </p>
+
+          <p class="text-amber-100/90 leading-relaxed">
+            André spelar gitarr och sjunger i MoA. Med fokus på känsla
+            och publikens energi skapar han en avslappnad och
+            stämningsfull atmosfär på varje spelning.
+          </p>
+
+        </div>
+
+        <!-- Markus -->
+        <div class="bg-amber-900/40 backdrop-blur-md rounded-xl p-8 text-center shadow-lg hover:scale-105 transition">
+
+          <img
+            src="/images/markus.jpg"
+            class="w-36 h-36 mx-auto rounded-full object-cover mb-6 border-4 border-amber-200"
+          />
+
+          <h2 class="text-3xl font-bold mb-4 text-amber-100">
+            Marcus
+          </h2>
+
+          <p class="text-amber-200 text-lg mb-4">
+            Stomp & sång
+          </p>
+
+          <p class="text-amber-100/90 leading-relaxed">
+            Marcus står för gitarr och sång i duon. Tillsammans med André
+            skapar han en blandning av klassiska låtar och moderna hits
+            som passar både barer, restauranger och privata event.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</Layout>

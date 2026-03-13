@@ -1,0 +1,57 @@
+---
+import "../styles/global.css";
+const { title = "MoA- Marcus & André",isHeroPage = false, } = Astro.props;
+const currentPath = Astro.url.pathname;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-gray-200 text-gray-900 font-sans flex flex-col min-h-screen">
+		<header class="absolute top-0 left-0 w-full z-20 shadow-md text-amber-100">
+			<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+				<a href="/" class="text-amber-100 hover:text-amber-300 text-3xl font-semibold tracking-wide font-playfair">
+					M&A - Marcus & André
+				</a>
+				<nav class="flex items-center space-x-8 text-sm font-medium uppercase tracking-wide">
+					<a 
+						href="/about" 
+						class={`nav-link ${currentPath === "/about" ? "active-nav" : ""}`}
+					>
+						Om oss
+					</a>
+					<a 
+						href="/offers" 
+						class={`nav-link ${currentPath === "/offers" ? "active-nav" : ""}`}
+					>
+						Tjänster
+					</a>
+					<a 
+						href="/media" 
+						class={`nav-link ${currentPath === "/media" ? "active-nav" : ""}`}
+					>
+						Musik/Media
+					</a>
+					<a 
+						href="/contact" 
+						class={`nav-link ${currentPath === "/contact" ? "active-nav" : ""}`}
+					>
+						Kontakta oss
+					</a>
+				</nav>
+			</div>
+			<div class="w-full border-b border-white/20"></div>
+		</header>
+		<main class={isHeroPage ? "p-0 m-0" : "container mx-auto px-4 pt-32 flex-grow"}>
+			<slot />
+		</main>
+		<footer class="bg-amber-100 text-black italic text-center p-3">
+			© {new Date().getFullYear()} M&O - Marcus & André
+		</footer>
+	</body>
+</html>

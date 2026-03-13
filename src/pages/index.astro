@@ -1,0 +1,96 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Startsida | MoA-Marcus & André" isHeroPage={true}>
+
+  <!-- HERO SECTION -->
+  <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
+    <img 
+      src="/images/background_home_page_playing_guitar.jpg" 
+      alt="Allsångarna background"
+      class="absolute inset-0 w-full h-full object-cover opacity-40"
+    />
+
+    <div class="absolute inset-0 bg-amber-900/30"></div>
+  	<div class="relative z-10 px-4">
+      <h1 class="hero-slide text-5xl font-bold mb-4 text-amber-100 drop-shadow-lg">
+        MoA- Marcus & André
+      </h1>
+
+      <p class="hero-slide text-xl text-amber-100 drop-shadow-md mb-8">
+        Live musik med fokus på känsla, energi och allsång – för barer, restauranger och event.
+      </p>
+
+      <a
+        href="/contact"
+        class="bg-slate-800 text-amber-100 px-6 py-3 rounded-lg shadow hover:bg-slate-700 transition"
+      >
+        Kontakta oss
+      </a>
+    </div>
+  </section>
+
+  <!-- SECOND SECTION -->
+  <section class="py-10 bg-amber-50">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <!-- Optional title -->
+      <h2 class="italic text-4xl font-semibold font-['Cormorant Garamond'] mb-6 text-amber-600 underline">
+        Vad vi erbjuder
+      </h2>
+
+      <p class="text-lg font-sans text-slate-700 leading-relaxed">
+        Vi är en trubadurduo som levererar allsång, energi och stämning.
+        <br>
+        Tillsammans har vi erfarenhet av att spela på allt från 
+        <span class="text-amber-600 font-semibold">barer</span> och 
+        <span class="text-amber-600 font-semibold">firmafester</span> till 
+        <span class="text-amber-600 font-semibold">privata event</span> och tillställningar.  
+        <br><br>
+        <span class="italic text-amber-500">
+          Fokus på stor igenkänningsfaktor med bred repertoar och fullt ös med allsång.
+        </span>
+        <br><br>
+      </p>
+
+      <!-- Optional subtle divider for separation -->
+      <hr class="my-8 border-amber-200 border-t-2 w-24 mx-auto rounded">
+
+      <!-- GRID OF TWO IMAGES -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+
+        <!-- Card 1 -->
+        <div class="rounded-xl overflow-hidden shadow-lg relative">
+          <img 
+            src="/images/bar_photo_home_page.jpg" 
+            alt="Bar Photo" 
+            class="w-full h-64 object-cover"
+          />
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <a
+              href="/offers" 
+              class="text-white text-2xl font-semibold drop-shadow">
+              Bar & Restaurang – Live Musik
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="rounded-xl overflow-hidden shadow-lg relative">
+          <img 
+            src="/images/private_company_home_page.jpg" 
+            alt="Private and Company Photo" 
+            class="w-full h-64 object-cover" 
+          />
+          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <a 
+              href="/offers"
+              class="text-white text-2xl font-semibold drop-shadow">
+              Privat & Företags Event – Live Musik
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
