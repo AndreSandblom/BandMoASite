@@ -1,11 +1,12 @@
 ---
 import Layout from "../layouts/Layout.astro"
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Låtar/Media | MoA-Marcus & André" isHeroPage={true}>
 	<section class="relative min-h-screen text-white overflow-hidden py-24">
 		<img 
-		src="/images/background_home_page_playing_guitar.jpg"
+		src={`${base}images/background_home_page_playing_guitar.jpg`}
 		class="absolute inset-0 w-full h-full object-cover opacity-40"
 		/>
 
@@ -36,25 +37,25 @@ import Layout from "../layouts/Layout.astro"
 
 					<div class="gallery-scroll overflow-y-auto max-h-[500px] grid grid-cols-2 gap-4 pr-2">
 						<img
-						src="/images/private_company_home_page.jpg" class="rounded-lg object-cover w-full h-full"
+						src={`${base}images/private_company_home_page.jpg`} class="rounded-lg object-cover w-full h-full"
 						/>
 						<img
-						src="/images/bar_photo_home_page.jpg" class="rounded-lg object-cover w-full h-full"
+						src={`${base}images/bar_photo_home_page.jpg`} class="rounded-lg object-cover w-full h-full"
 						/>
 						<img
-						src="/images/background_home_page_two_guitars.jpg" class="rounded-lg object-cover w-full h-full"
+						src={`${base}images/background_home_page_two_guitars.jpg`} class="rounded-lg object-cover w-full h-full"
 						/>
 						<img
-						src="/images/background_home_page_playing_guitar.jpg" class="rounded-lg object-cover w-full h-full"
+						src={`${base}images/background_home_page_playing_guitar.jpg`} class="rounded-lg object-cover w-full h-full"
 						/>
 						<img
-						src="/images/background_home_page_playing_guitar.jpg" class="rounded-lg object-cover w-full h-full"
+						src={`${base}images/background_home_page_playing_guitar.jpg`} class="rounded-lg object-cover w-full h-full"
 						/>
 						<img
-						src="/images/background_home_page_playing_guitar.jpg" class="rounded-lg object-cover w-full h-full"
+						src={`${base}images/background_home_page_playing_guitar.jpg`} class="rounded-lg object-cover w-full h-full"
 						/>
 						<img
-						src="/images/background_home_page_playing_guitar.jpg" class="rounded-lg object-cover w-full h-full"
+						src={`${base}images/background_home_page_playing_guitar.jpg`} class="rounded-lg object-cover w-full h-full"
 						/>
 					</div>
 				</div>

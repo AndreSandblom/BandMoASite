@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro"
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Vad vi erbjuder | MoA - Marcus & André" isHeroPage={true}>
@@ -7,7 +8,7 @@ import Layout from "../layouts/Layout.astro"
 
   <!-- Background -->
   <img 
-    src="images/background_home_page_playing_guitar.jpg"
+    src={`${base}images/background_home_page_playing_guitar.jpg`}
     class="absolute inset-0 w-full h-full object-cover opacity-40"
   />
 
