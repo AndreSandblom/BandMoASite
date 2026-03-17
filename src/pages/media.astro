@@ -14,9 +14,9 @@ const base = import.meta.env.BASE_URL;
 
 		<div class="relative z-10 px-4 w-full max-w-6xl mx-auto">
 
-			<div class="grid grid-cols-3 gap-6">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 				<!-- LEFT COLUMN -->
-				<div class="col-span-1">
+				<div class="md:col-span-1">
 					<h2 class="hero-slide text-4xl font-bold italic mb-6 text-amber-100 drop-shadow-lg text-center">
 						Exempel Musik
 					</h2>
@@ -30,12 +30,12 @@ const base = import.meta.env.BASE_URL;
 				</div>
 
 				<!-- RIGHT COLUMN -->
-				<div class="col-span-2">
+				<div class="md:col-span-2">
 					<h2 class="hero-slide text-4xl font-bold italic mb-6 text-amber-100 drop-shadow-lg text-center">
 						Galleri
 					</h2>
 
-					<div class="gallery-scroll overflow-y-auto max-h-[500px] grid grid-cols-2 gap-4 pr-2">
+					<div class="gallery-scroll overflow-y-auto max-h-[500px] grid grid-cols-1 sm:grid-cols-2 gap-4 pr-2">
 						<img
 						src={`${base}images/private_company_home_page.jpg`} class="rounded-lg object-cover w-full h-full"
 						/>
