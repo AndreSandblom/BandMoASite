@@ -60,3 +60,10 @@
 .gallery-scroll::-webkit-scrollbar-thumb:hover {
   background: #fcd34d;
 }
+#mobile-menu {
+  @apply hidden flex-col md:flex md:flex-row;
+}
+
+#mobile-menu.open {
+  @apply flex;
+}
