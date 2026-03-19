@@ -24,8 +24,12 @@ const base = import.meta.env.BASE_URL;
         -- Skicka en bokningsförfråga för offert --
       </p>
 
-      <form class="space-y-6 bg-amber-900/40 backdrop-blur-md p-8 rounded-xl shadow-lg text-black">
-
+      <form 
+        id="contact-form"
+        action="https://formspree.io/f/mbdzwzqn"
+        method="POST"
+        class="space-y-6 bg-amber-900/40 backdrop-blur-md p-8 rounded-xl shadow-lg text-black"
+        >
         <div class="grid md:grid-cols-2 gap-6">
           <input
             type="text"
@@ -78,14 +82,57 @@ const base = import.meta.env.BASE_URL;
 
         <button
           type="submit"
-          class=" bg-amber-700 hover:bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold transition"
+          class="bg-amber-700 hover:bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold transition"
         > 
           Skicka förfrågan
         </button>
+        <p id="form-status" class="hidden text-green-700 font-semibold">
+          Tack! Din förfrågan har skickats. Vi återkommer så snart vi kan.
+        </p>
 
       </form>
 
     </div>
   </section>
+  <script>
+  const form = document.getElementById("contact-form") as HTMLFormElement | null;
+  const status = document.getElementById("form-status") as HTMLParagraphElement | null;
 
+  if (form && status) {
+    const button = form.querySelector("button[type='submit']") as HTMLButtonElement | null;
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      if (button) {
+        button.disabled = true;
+        button.textContent = "Skickar...";
+      }
+
+      const data = new FormData(form);
+
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" }
+      });
+
+      if (response.ok) {
+        form.reset();
+        status.classList.remove("hidden");
+        status.textContent = "Tack! Din förfrågan har skickats. Vi återkommer så snart vi kan.";
+      } else {
+        status.classList.remove("hidden");
+        status.classList.remove("text-green-700");
+        status.classList.add("text-red-700");
+        status.textContent = "Något gick fel. Försök igen senare.";
+      }
+
+      if (button) {
+        button.disabled = false;
+        button.textContent = "Skicka förfrågan";
+      }
+    });
+  }
+  </script>
 </Layout>
