@@ -81,33 +81,28 @@ const base = import.meta.env.BASE_URL;
         ></textarea>
 
         <button
+          id="submit-button"
           type="submit"
           class="bg-amber-700 hover:bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold transition"
         > 
           Skicka förfrågan
         </button>
-        <p id="form-status" class="hidden text-green-700 font-semibold">
-          Tack! Din förfrågan har skickats. Vi återkommer så snart vi kan.
-        </p>
-
       </form>
 
     </div>
   </section>
-  <script>
+  <script is:inline>
   const form = document.getElementById("contact-form") as HTMLFormElement | null;
-  const status = document.getElementById("form-status") as HTMLParagraphElement | null;
+  const button = document.getElementById("submit-button") as HTMLButtonElement | null;
 
-  if (form && status) {
+  if (form && button) {
     const button = form.querySelector("button[type='submit']") as HTMLButtonElement | null;
 
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
 
-      if (button) {
-        button.disabled = true;
-        button.textContent = "Skickar...";
-      }
+      button.disabled = true;
+      button.textContent = "Skickar...";
 
       const data = new FormData(form);
 
@@ -118,20 +113,20 @@ const base = import.meta.env.BASE_URL;
       });
 
       if (response.ok) {
+
         form.reset();
-        status.classList.remove("hidden");
-        status.textContent = "Tack! Din förfrågan har skickats. Vi återkommer så snart vi kan.";
+
+        button.textContent = "Tack! Din förfrågan har skickats. Vi återkommer så snart vi kan.";
+        button.classList.remove("bg-amber-700","hover:bg-amber-600");
+        button.classList.add("bg-green-700","cursor-default");
+        
       } else {
-        status.classList.remove("hidden");
-        status.classList.remove("text-green-700");
-        status.classList.add("text-red-700");
-        status.textContent = "Något gick fel. Försök igen senare.";
+        button.disabled = false;
+        button.textContent = "Något gick fel – försök igen";
+        button.classList.remove("bg-amber-700");
+        button.classList.add("bg-red-700");
       }
 
-      if (button) {
-        button.disabled = false;
-        button.textContent = "Skicka förfrågan";
-      }
     });
   }
   </script>
