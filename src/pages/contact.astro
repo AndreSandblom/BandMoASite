@@ -92,12 +92,12 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
   <script is:inline>
-  const form = document.getElementById("contact-form") as HTMLFormElement | null;
-  const button = document.getElementById("submit-button") as HTMLButtonElement | null;
+  const form = document.getElementById("contact-form");
+  const button = document.getElementById("submit-button");
 
   if (form && button) {
 
-    form.addEventListener("submit", async (e) => {
+    form.addEventListener("submit", async function(e) {
       e.preventDefault();
 
       button.disabled = true;
@@ -127,7 +127,6 @@ const base = import.meta.env.BASE_URL;
         button.classList.add("bg-red-700");
 
       }
-
     });
 
   }
