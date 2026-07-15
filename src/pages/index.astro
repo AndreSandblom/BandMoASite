@@ -4,94 +4,106 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Startsida | MoA-Marcus & André" isHeroPage={true}>
-
-  <!-- HERO SECTION -->
-  <section class="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
-    <img 
-      src={`${base}images/background_home_page_playing_guitar.jpg`}
-      alt="Allsångarna background"
-      class="absolute inset-0 w-full h-full object-cover opacity-40"
-    />
-
-    <div class="absolute inset-0 bg-amber-900/30"></div>
-  	<div class="relative z-10 px-4">
-      <h1 class="hero-slide text-5xl font-bold italic mb-4 text-amber-100 drop-shadow-lg">
-        MoA- Marcus & André
-      </h1>
-
-      <p class="hero-slide text-xl text-amber-100 drop-shadow-md mb-8">
-        Live musik med fokus på känsla, energi och allsång – för barer, restauranger och event.
-      </p>
-
-      <a
-        href={`${base}contact/`}
-        class="bg-amber-700 hover:bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold transition"
-      >
-        Kontakta oss
-      </a>
+  <div class="relative min-h-screen">
+    <div class="fixed inset-0 z-0 pointer-events-none">
+      <img
+        src={`${base}images/background_home_page_playing_guitar.jpg`}
+        alt="Allsångarna background"
+        class="absolute inset-0 w-full h-full object-cover"
+      />
+      <div class="absolute inset-0 bg-amber-950/40"></div>
     </div>
-  </section>
 
-  <!-- SECOND SECTION -->
-  <section class="py-10 bg-amber-50">
-    <div class="max-w-5xl mx-auto px-4 text-center">
-      <!-- Optional title -->
-      <h2 class="italic text-4xl font-semibold font-['Cormorant Garamond'] mb-6 text-amber-600 underline">
-        Vad vi erbjuder
-      </h2>
+    <main class="relative z-10">
+      <!-- HERO SECTION -->
+      <section class="min-h-screen flex items-center justify-center text-center px-4 py-10 md:py-12">
+        <div class="max-w-3xl">
+          <h1 class="hero-slide text-5xl font-bold italic mb-4 text-amber-100 drop-shadow-lg">
+            MoA- Marcus & André
+          </h1>
 
-      <p class="text-lg font-sans text-slate-700 leading-relaxed">
-        Vi är en trubadurduo som levererar allsång, energi och stämning.
-        <br>
-        Tillsammans har vi erfarenhet av att spela på allt från 
-        <span class="text-amber-600 font-semibold">barer</span> och 
-        <span class="text-amber-600 font-semibold">firmafester</span> till 
-        <span class="text-amber-600 font-semibold">privata event</span> och tillställningar.  
-        <br><br>
-        <span class="italic text-amber-500">
-          Fokus på stor igenkänningsfaktor med bred repertoar och fullt ös med allsång.
-        </span>
-        <br><br>
-      </p>
+          <p class="hero-slide text-xl text-amber-100 drop-shadow-md mb-8">
+            Live musik med fokus på känsla, energi och allsång – för barer, restauranger och event.
+          </p>
 
-      <!-- Optional subtle divider for separation -->
-      <hr class="my-8 border-amber-200 border-t-2 w-24 mx-auto rounded">
-
-      <!-- GRID OF TWO IMAGES -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
-
-        <!-- Card 1 -->
-        <div class="rounded-xl overflow-hidden shadow-lg relative">
-          <img 
-            src={`${base}images/bar_photo_home_page.jpg`}
-            alt="Bar Photo" 
-            class="w-full h-64 object-cover"
-          />
-          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-            <a
-              href={`${base}offers/`}
-              class="text-white text-2xl font-semibold drop-shadow">
-              Bar & Restaurang – Live Musik
-            </a>
-          </div>
+          <a
+            href={`${base}contact/`}
+            class="bg-amber-700 hover:bg-amber-600 text-white py-3 px-6 rounded-lg font-semibold transition"
+          >
+            Kontakta oss
+          </a>
         </div>
+      </section>
 
-        <!-- Card 2 -->
-        <div class="rounded-xl overflow-hidden shadow-lg relative">
-          <img 
-            src={`${base}images/private_company_home_page.jpg`}
-            alt="Private and Company Photo" 
-            class="w-full h-64 object-cover" 
-          />
-          <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
-            <a 
-              href={`${base}offers/`}
-              class="text-white text-2xl font-semibold drop-shadow">
-              Privat & Företags Event – Live Musik
-            </a>
-          </div>
-        </div>
+      <div class="flex justify-center px-4 pt-1 pb-3 md:pt-2 md:pb-4">
+        <hr class="w-24 border-amber-200/70 border-t-2 rounded" />
       </div>
-    </div>
-  </section>
+
+      <!-- SECOND SECTION -->
+      <section class="min-h-[68vh] flex items-center justify-center px-4 py-8 md:py-10">
+        <div class="max-w-5xl w-full text-center px-4 md:px-8">
+          <h2 class="italic text-4xl font-semibold font-['Cormorant Garamond'] mb-6 text-amber-100 drop-shadow-lg">
+            Vad vi erbjuder
+          </h2>
+
+          <p class="text-lg font-sans text-amber-100 leading-relaxed drop-shadow-md">
+            Vi är en trubadurduo som levererar allsång, energi och stämning.
+            <br />
+            Tillsammans har vi erfarenhet av att spela på allt från
+            <span class="text-amber-100 font-semibold"> barer</span> och
+            <span class="text-amber-100 font-semibold"> firmafester</span> till
+            <span class="text-amber-100 font-semibold"> privata event</span> och tillställningar.
+            <br /><br />
+            <span class="italic text-amber-100/90">
+              Fokus på stor igenkänningsfaktor med bred repertoar och fullt ös med allsång.
+            </span>
+            <br /><br />
+          </p>
+
+          <hr class="my-6 border-amber-200/70 border-t-2 w-24 mx-auto rounded" />
+        </div>
+      </section>
+
+      <!-- THIRD SECTION -->
+      <section class="min-h-[68vh] flex items-center justify-center px-4 py-8 md:py-10">
+        <div class="max-w-5xl w-full px-4 md:px-8">
+          <div class="grid grid-cols-1 gap-8">
+            <div class="group relative overflow-hidden rounded-[1.75rem] border border-amber-100/25 shadow-[0_10px_30px_rgba(0,0,0,0.18)]">
+              <img
+                src={`${base}images/bar_photo_home_page.jpg`}
+                alt="Bar Photo"
+                class="w-full h-60 md:h-64 object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-amber-950/70 via-amber-900/20 to-amber-950/10"></div>
+              <div class="absolute inset-0 flex items-center justify-center p-6 text-center">
+                <a
+                  href={`${base}offers/`}
+                  class="text-amber-50 text-xl md:text-2xl font-semibold drop-shadow-lg"
+                >
+                  Bar & Restaurang – Live Musik
+                </a>
+              </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-[1.75rem] border border-amber-100/25 shadow-[0_10px_30px_rgba(0,0,0,0.18)]">
+              <img
+                src={`${base}images/private_company_home_page.jpg`}
+                alt="Private and Company Photo"
+                class="w-full h-60 md:h-64 object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-amber-950/70 via-amber-900/20 to-amber-950/10"></div>
+              <div class="absolute inset-0 flex items-center justify-center p-6 text-center">
+                <a
+                  href={`${base}offers/`}
+                  class="text-amber-50 text-xl md:text-2xl font-semibold drop-shadow-lg"
+                >
+                  Privat & Företags Event – Live Musik
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 </Layout>
